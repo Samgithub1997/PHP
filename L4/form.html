@@ -1,0 +1,62 @@
+<html>
+	<head> <h1> FORM </h1>
+		</head>
+	<body>
+		
+		<form name="frm" method="post" enctype="multipart/form-data" action="index.php" >
+			<table bgcolor="cyan" width="100%" height="100%">
+			<tr>
+				<th>
+			USERNAME :
+				</th>
+				<th><input type="text" name="txt1" >
+					</th>
+					</tr>
+			
+			<tr>
+				<th>
+					PASSWORD : </th><th><input type="password" name="txt2"></th>
+			</tr>
+			<tr>
+				<th>
+			Address :</th><th><Textarea cols="40" rows="2">Enter Your Address .....</Textarea></th>
+			</tr>
+			
+			<tr>
+				<th>
+			Email : </th><th><input type="text" name="txt3" ></th>
+				</tr>
+			<tr>
+				<th>
+			COMMENTS: </th><th><Textarea name="comment" cols="40" rows="3"></Textarea></th>
+				</tr>
+				
+			<tr>
+			<th>
+				CITY <SELECT name="city" ><option value="surat">SURAT </option><option value="delhi">DELHI</option><option value="manipal">Manipal</option><option value="mumbai">Mumbai</option>
+				</SELECT>
+				</th>
+			<th>
+				CHOOSE FILES : <input type="file" name="files" >
+			</th>
+			</tr>
+			<tr>
+				<th>HOBBIES </th>
+				<th><input type="checkbox" name="r[]" value="read">Reading<br><input type="checkbox" name="r[]" value="play">Playing Games 
+			<br>	<input type="checkbox" name="r[]" value="coding">coding</th>
+			</tr>
+			
+			<tr>
+			<th>
+			<input type="radio" name="rb" value="male"> MALE
+			</th>
+			<th>
+			<input type="radio" name="rb" value="female"> FEMALE
+			</th>
+			</tr>
+			
+			<tr ><th colspan="2"><center><input type="submit" name="btn" value="SUBMIT THE FORM "></center></th></tr>
+			</table>
+			</form>
+		</body>
+</html>
