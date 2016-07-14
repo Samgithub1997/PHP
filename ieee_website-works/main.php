@@ -97,12 +97,12 @@ $('#submit1').click(function(){
 		margin-left:50px;
 		margin-right:10px;
 		width:91%;
-		height:40px;
+		height:55px;
 		bottom:0px;
 		overflow:hidden;
 		background-color:#0E0D0D;
 		color:#e0e0d1;
-		border-radius:4px;
+		border-radius:9px;
 	}
 	
   .carousel-inner > .item > img,
@@ -227,21 +227,21 @@ $('#submit1').click(function(){
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active m">
-        <center><img src="logo.jpg" alt="Chania" width="400" height="440"></center>
+        <center><img src="logo.jpg" alt="Chania" width="480" height="440"></center>
       </div>
 
       <div class="item m">
-       <center> <img src="manipal_group.jpg" alt="Chania" width="440" height="440">
+       <center> <img src="manipal_group.jpg" alt="Chania" width="480" height="440">
       </center>
       </div>
     
       <div class="item m">
-      <center>  <img src="swag.jpg" alt="Flower" width="440" height="440">
+      <center>  <img src="swag.jpg" alt="Flower" width="480" height="440">
 	  </center>  
     </div>
 
       <div class="item m">
-      <center><img src="swagwh.jpg" alt="Flower" width="440" height="440"></center>
+      <center><img src="swagwh.jpg" alt="Flower" width="480" height="440"></center>
       </div>
     </div>
 
@@ -284,8 +284,8 @@ $('#submit1').click(function(){
 	</div>	
 </div>
 	</div></div>
-	<div class="botfram">
-	copyright <img src="copyright.jpg" width="20" height="20">   of IEEE Student branch Manipal &nbsp &nbsp&nbsp	&nbsp &nbsp	&nbsp 	 
+	<div class="botfram"><center><br>
+	<?php include "copyright.php";?>
 		</div>
 	
 	
