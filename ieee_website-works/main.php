@@ -286,7 +286,7 @@ $('#submit1').click(function(){
 	</div></div>
 	<div class="botfram"><center><br>
 	<?php include "copyright.php";?>
-		</div>
+	</center>	</div>
 	
 	
 	</div>

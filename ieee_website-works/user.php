@@ -21,14 +21,13 @@ $var="";
 			$ma=$row['email'];
 			$unm=$row['username'];
 			$pa=$row['password'];
-			$pas=$row['confirm_password'];
 			$ct=$row['city'];
-			$var=$row['blog']	;		
+		
 	}
 }
 if(isset($_REQUEST['btnsubmit']))
 {
-	$upd="update user set id='".$num."',name='".$_REQUEST['txtnam']."', surname='".$_REQUEST['txtsurn']."',email='".$_REQUEST['txtma']."',username='".$_REQUEST['txtusaa']."',password='".$_REQUEST['txttop']."',confirm_password='".$_REQUEST['txttopp']."',city='".$_REQUEST['city']."' where id= '".$_REQUEST['$num']."'";
+	$upd="update user set id='".$num."',name='".$_REQUEST['txtnam']."', surname='".$_REQUEST['txtsurn']."',email='".$_REQUEST['txtma']."',username='".$_REQUEST['txtusaa']."',password='".$_REQUEST['txttop']."',city='".$_REQUEST['city']."' where id= '".$_REQUEST['$num']."'";
 	mysql_query($upd);
 	header("location:welcomeuser.php");
 
@@ -41,6 +40,7 @@ if(isset($_REQUEST['btnsubmit']))
 		</title>
 	</head>
 	<body background="plain.jpg">
+		<form name="o">
 		<table  cellpadding="10px">
 			<tr> <th> Registration Num : </th> <th> <?php echo $num; ?></th>
 			</tr>
@@ -54,11 +54,10 @@ if(isset($_REQUEST['btnsubmit']))
 			</tr>
 			<tr> <th> Password : </th> <th> <input type="password" name="txttop" value="<?php echo $pa; ?>"></th>
 			</tr>
-			<tr> <th>confirm Password : </th> <th> <input type="password" name="txttopp" value="<?php echo $pas; ?>"></th>
-			</tr>
 			<tr> <th> city : </th> <th> <input type="text" name="city" value="<?php echo $ct; ?>"></th>
 			</tr>
 		</table>
-		<center>  <input type="button" name="btnsubmit"  style="border-radius:4px;padding-bottom:10px;padding-top:10px;padding-left:10px;padding-right:10px;" class="btnsubmit" value="Submit changes"></center>
+			</form>
+		<center>  <input type="submit" name="btnsubmit"  style="border-radius:4px;padding-bottom:10px;padding-top:10px;padding-left:10px;padding-right:10px;" class="btnsubmit" value="Submit changes"></center>
 	</body>
 </html>

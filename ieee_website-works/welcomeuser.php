@@ -39,7 +39,7 @@ $u=$_SESSION['user'];
 				display: inline-flex;
 			}
 	.botfram{
-		position: absolute;
+		position: fixed;
 		margin-left:-14px;
 		margin-right:20px;
 		width:91%;
@@ -210,9 +210,7 @@ The IEEE is incorporated under the Not-for-Profit Corporation Law of the state o
 			<img src="w/1.jpg"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/2.jpg" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w4.jpg" width="350" height="350"><br>
 	<br><br><img src="w/w1.jpg" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/w2.jpg"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w3.jpg" width="350" height="350"><br>
 	<br><br><img src="w/w5.jpg"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/w4.jpg" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/3.jpg" width="350" height="350"><br>
-		</div><br><br><div class="botfram"><center><br>
-	<?php include "copyright.php";?>
-		</center></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<div id="contactus">
 			<h3>Please be free to contact any of the given members..</h3><br><br>
 			Sam     : 9999999999 <br>

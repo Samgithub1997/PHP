@@ -2,6 +2,12 @@
 	<head>
 		<script src="jquery.min.js"></script>
 		<script>
+			$(document).ready(function(){
+				if((('#pass').val())!=(('#pass1').val())){
+					('#ivpass','#ivpass1').html("<h5>Password and confirm password are not matching..</h5>")
+				}
+			
+			});
 		</script>
 		<link href="bootstrap.css" type="text/css" rel="stylesheet"/>
 		<?php
@@ -10,7 +16,7 @@
 			mysql_select_db("users",$con) or die (mysql_error());
 			if(isset($_REQUEST['sm']))
 			{
-				$ins="insert into user values(null,'".$_REQUEST['txt1']."','".$_REQUEST['txt2']."','".$_REQUEST['email']."','".$_REQUEST['user']."','".$_REQUEST['pass']."','".$_REQUEST['pass1']."','".$_REQUEST['city']."')";
+				$ins="insert into user values('".null."','".$_REQUEST['txt1']."','".$_REQUEST['txt2']."','".$_REQUEST['email']."','".$_REQUEST['user']."','".$_REQUEST['pass']."','".$_REQUEST['pass1']."','".$_REQUEST['city']."')";
 				mysql_query($ins);
 				header("location:main.php");
 			}
@@ -52,8 +58,10 @@
 							<label>EMAIL  </label> <input type="email" id="email" class="form-control" name="email" required><br>
 							<label>USERNAME </label> <input type="text" id="user" class="form-control" name="user" required><br>
 							<label>PASSWORD</label> <input type="password" id="pass" class="form-control" name="pass" required><br>
+							<div id="ivpass" style="font-color:red"></div><br>
 							<label>CONFIRM PASSWORD</label> <input type="password" id="pass1" class="form-control" name="pass1" required><br>
-							<label>CITY</label> <input type="text" class="form-control" name="city" ><br>
+							<div id="ivpass" style="font-color:red"></div><br>
+							<label>CITY</label> <input type="text" class="form-control" name="city" required><br>
 							<br>
 							<input type="submit" name="sm" value="SUMBIT QUERY" class="btn btn-info">
 						</form>
