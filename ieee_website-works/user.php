@@ -1,4 +1,3 @@
-
 <?php
 $nm="";
 $sn="";
@@ -11,7 +10,7 @@ $var="";
 	session_start();
 	$con=mysql_connect("localhost","root","");
 	mysql_select_db("users",$con);
-	$sel="select * from user where username='".$_SESSION['user']."'";
+	$sel="select * from user where id='".$_SESSION['id']."'";
 	$rs=mysql_query($sel);
 	if(mysql_num_rows($rs)>0){
 		while($row=mysql_fetch_array($rs)){
@@ -25,12 +24,11 @@ $var="";
 		
 	}
 }
-if(isset($_REQUEST['btnsubmit']))
+if(isset($_REQUEST['ssubmit']))
 {
-	$upd="update user set id='".$num."',name='".$_REQUEST['txtnam']."', surname='".$_REQUEST['txtsurn']."',email='".$_REQUEST['txtma']."',username='".$_REQUEST['txtusaa']."',password='".$_REQUEST['txttop']."',city='".$_REQUEST['city']."' where id= '".$_REQUEST['$num']."'";
+	$upd="update user set name='".$_REQUEST['txtnam']."', surname='".$_REQUEST['txtsurn']."',email='".$_REQUEST['txtma']."',username='".$_REQUEST['txtusaa']."',password='".$_REQUEST['txttop']."',city='".$_REQUEST['city']."' where id= '".$num."'";
 	mysql_query($upd);
 	header("location:welcomeuser.php");
-
 }
 ?>
 <html>
@@ -57,7 +55,8 @@ if(isset($_REQUEST['btnsubmit']))
 			<tr> <th> city : </th> <th> <input type="text" name="city" value="<?php echo $ct; ?>"></th>
 			</tr>
 		</table>
+			<center>  <input type="submit" name="ssubmit"  value="Submit changes"></center>
 			</form>
-		<center>  <input type="submit" name="btnsubmit"  style="border-radius:4px;padding-bottom:10px;padding-top:10px;padding-left:10px;padding-right:10px;" class="btnsubmit" value="Submit changes"></center>
+		
 	</body>
 </html>

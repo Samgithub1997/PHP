@@ -61,28 +61,38 @@ $u=$_SESSION['user'];
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-		$(window).unload(function(){
-			var a = confirm(' Are You Sure YOu Want To Leave This Page ');
+			$('.up').click(function(){
+			alert(" No upcoming events ! Wait till end of August.. Thanks for visiting BTW  :) ");
+		});
+		$('.p').mouseover(function(){
+			$(this).animate({
+			height:'+=30'
+			});
+		});
+	$('.p').mouseleave(function(){
+		$(this).animate({
+			height:'-=30'
+		});
+	});
+	$(document).on('click','.p',function(){
+			$(this).toggle(1000);
+	});	
+		});
+		$(window).on('beforeunload', function(){
+        var a = confirm(' Are You Sure YOu Want To Leave This Page ');
 			if (a){
 				return true;
 			}
 			else{
 				return false;
 			}
-		});
-			
-			$('.up').click(function(){
-			alert(" No upcoming events ! Wait till end of August.. Thanks for visiting BTW  :) ");
-		});
-		});
-		
-		
-		
+     });
 	</script>
+	
 	<title>
 		Project
 	</title>
@@ -207,9 +217,9 @@ The IEEE is incorporated under the Not-for-Profit Corporation Law of the state o
 		<div id="photos">
 			<h3><b><u> <center>  Photos  </center> </u></b></h3><br>
 			<br>
-			<img src="w/1.jpg"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/2.jpg" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w4.jpg" width="350" height="350"><br>
-	<br><br><img src="w/w1.jpg" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/w2.jpg"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w3.jpg" width="350" height="350"><br>
-	<br><br><img src="w/w5.jpg"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/w4.jpg" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/3.jpg" width="350" height="350"><br>
+			<img src="w/1.jpg" class="p"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/2.jpg" class="p" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w4.jpg" class="p" width="350" height="350"><br>
+	<br><br><img src="w/w1.jpg" class="p" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/w2.jpg"class="p"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w3.jpg" class="p" width="350" height="350"><br>
+	<br><br><img src="w/w11.jpg"class="p" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/w4.jpg" width="350" class="p" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/3.jpg" class="p" width="350" height="350"><br>
 		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<div id="contactus">
 			<h3>Please be free to contact any of the given members..</h3><br><br>
