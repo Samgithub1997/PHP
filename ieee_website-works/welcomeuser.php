@@ -50,6 +50,18 @@ $u=$_SESSION['user'];
 		color:#e0e0d1;
 		border-radius:9px;
 	}
+	#btntop1{
+	margin-top:-50px;
+	border-radius:9px;
+	}
+	#btntop2{
+	margin-top:-50px;
+	border-radius:9px;
+	}
+	#btntop3{
+	margin-top:-50px;
+	border-radius:9px;
+	}
 	
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -78,17 +90,68 @@ $u=$_SESSION['user'];
 			height:'-=30'
 		});
 	});
+		$('#h').mouseover(function(){
+			$(this).animate({
+			fontSize: '+=10'
+			});
+		});
+	$('#im').mouseover(function(){
+			$(this).animate({
+			fontSize: '+=15'
+			});
+		});
+
+		$('#h').mouseleave(function(){
+			$(this).animate({
+			fontSize: '-=10'
+			});
+		});
+	$('#im').mouseleave(function(){
+			$(this).animate({
+			fontSize: '-=15'
+			});
+		});
+	$('#btntop1').click(function(){
+		$('html,body').animate({scrollTop:0},'4900');
+	});
+	$('#btntop2').click(function(){
+		$('html,body').animate({scrollTop:0},'4900');
+	});
+	$('#btntop3').click(function(){
+		$('html,body').animate({scrollTop:0},'4900');
+	});
+
+	$('#btntop1').mouseover(function(){
+		$('#btntop1').animate({opacity : 0.2});
+	});
+	$('#btntop2').mouseover(function(){
+		$('#btntop2').animate({ opacity : 0.2});
+	});
+	$('#btntop3').mouseover(function(){
+		$('#btntop3').animate({ opacity :0.2});
+	});
+
+	$('#btntop1').mouseleave(function(){
+		$('#btntop1').animate({ opacity: 1.2});
+	});
+	$('#btntop2').mouseleave(function(){
+		$('#btntop2').animate({ opacity :1.2});
+	});
+	$('#btntop3').mouseleave(function(){
+		$('#btntop3').animate({ opacity : 1.2});
+	});	
 	$(document).on('click','.p',function(){
 			$(this).toggle(1000);
-	});	
-		});
+	});
+
+});
 		$(window).on('beforeunload', function(){
         var a = confirm(' Are You Sure YOu Want To Leave This Page ');
-			if (a){
-				return true;
+			if (!a){
+				return false;
 			}
 			else{
-				return false;
+				return true;
 			}
      });
 	</script>
@@ -115,6 +178,7 @@ $u=$_SESSION['user'];
   <button class="btn btn dropdown-toggle marg" style="background-color:#1a1a1a ; color:#a6a6a6"   type="button" data-toggle="dropdown">Manipal
   <span class="caret"></span></button>
   <ul class="dropdown-menu">
+  
     <li><a href="http://manipal.info/placestovisit.html">Around Manipal</a></li>
     <li><a href="https://www.tripadvisor.in/Hotels-g737163-Manipal_Karnataka-Hotels.html">Hotels</a></li>
     <li><a href="https://www.tripadvisor.in/Restaurants-g737163-Manipal_Karnataka.html">Bars And Restaurants</a></li>
@@ -190,7 +254,7 @@ $u=$_SESSION['user'];
 	
 </div>
 <div class="col-sm-6 ">
-	<h1 class="marh m2"><center> IEEE SBM </center> </h1>
+	<h1 id="im" class="marh m2"><center> IEEE SBM </center> </h1>
 				
 				<br><br>			
 					<div class="row">
@@ -204,18 +268,18 @@ $u=$_SESSION['user'];
 	<div id="body" class="row">
 	<div class="col-sm-12" id="matter">
 		<div id="hom">
-			<div id="h"><h3><b><u><center>Institute of Electrical and Electronics Engineers </center></u></b></h3></div><br><br>
+			<div><h3 id="h"><b><u><center>Institute of Electrical and Electronics Engineers </center></u></b></h3></div><br><br>
 			<div id="cont"><p>IEEE stands for the "Institute of Electrical and Electronics Engineers". The Association is chartered under this full legal name. IEEE's membership has long been composed of engineers and scientists. Allied professionals who are members include computer scientists, software developers, information technology professionals, physicists, and medical doctors, in addition to IEEE's electrical and electronics engineering core. For this reason the organization no longer goes by the full name, except on legal business documents, and is referred to simply as IEEE.</p><br>
 			<p>The IEEE is dedicated to advancing technological innovation and excellence. It has about 430,000 members in about 160 countries, slightly less than half of whom reside in the United States..<br>IEEE is one of the leading standards-making organizations in the world. IEEE performs its standards making and maintaining functions through the IEEE Standards Association (IEEE-SA). IEEE standards affect a wide range of industries including: power and energy, biomedical and healthcare, Information Technology (IT), telecommunications, transportation, nanotechnology, information assurance, and many more. In 2013, IEEE had over 900 active standards, with over 500 standards under development. One of the more notable IEEE standards is the IEEE 802 LAN/MAN group of standards which includes the IEEE 802.3 Ethernet standard and the IEEE 802.11 Wireless Networking standard.</p>
 			</div>
 		</div><br><br><br>
 		<div id="aboutus">
-			<h3><b><u><center>About Us</center></u></b></h3><br>
+			<h3><b><u><center>About Us</center></u></b></h3><br><button id="btntop1" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;float:right; background:#1e1e15 ; color:#d9d9d9"> Return To Home </button>
 <p>			The major interests of the AIEE were wire communications (telegraphy and telephony) and light and power systems. The IRE concerned mostly radio engineering, and was formed from two smaller organizations, the Society of Wireless and Telegraph Engineers and the Wireless Institute. With the rise of electronics in the 1930s, electronics engineers usually became members of the IRE, but the applications of electron tube technology became so extensive that the technical boundaries differentiating the IRE and the AIEE became difficult to distinguish. After World War II, the two organizations became increasingly competitive, and in 1961, the leadership of both the IRE and the AIEE resolved to consolidate the two organizations. The two organizations formally merged as the IEEE on January 1, 1963.<br>
 The IEEE is incorporated under the Not-for-Profit Corporation Law of the state of New York.[5] It was formed in 1963 by the merger of the Institute of Radio Engineers (IRE, founded 1912) and the American Institute of Electrical Engineers (AIEE, founded 1884). <br>Notable presidents of IEEE and its founding organizations include Elihu Thomson (AIEE, 1889–1890), Alexander Graham Bell (AIEE, 1891–1892), Charles Proteus Steinmetz (AIEE, 1901–1902), Robert H. Marriott (IRE, 1912), Lee De Forest (IRE, 1930), Frederick E. Terman (IRE, 1941), William R. Hewlett (IRE, 1954), Ernst Weber (IRE, 1959; IEEE, 1963), and Ivan Getting (IEEE, 1978).</p><br><br><br><br><br><br><br><br>
 		</div>
 		<div id="photos">
-			<h3><b><u> <center>  Photos  </center> </u></b></h3><br>
+			<h3><b><u> <center>  Photos  </center> </u></b></h3><br><button id="btntop2" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;float:right; background:#1e1e15 ; color:#d9d9d9"> Return To Home </button>
 			<br>
 			<img src="w/1.jpg" class="p"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/2.jpg" class="p" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w4.jpg" class="p" width="350" height="350"><br>
 	<br><br><img src="w/w1.jpg" class="p" width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="w/w2.jpg"class="p"  width="350" height="350">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp<img src="w/w3.jpg" class="p" width="350" height="350"><br>
@@ -227,6 +291,7 @@ The IEEE is incorporated under the Not-for-Profit Corporation Law of the state o
 			Xam     : 9999999998 <br>
 			Pam     : 9999999989 <br>
 			Lan     : 9999999988 <br><br><br><br><br><br>
+			<button id="btntop3" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;float:right; background:#1e1e15 ; color:#d9d9d9"> Return To Home </button>
 		</div>
 	</div>
 	</div>
